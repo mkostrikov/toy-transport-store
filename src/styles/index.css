@@ -54,7 +54,7 @@ ul {
 .main {
   padding: 0 20px;
   display: grid;
-  gap: 20px;
+  gap: 72px;
 }
 
 .header {
@@ -186,6 +186,7 @@ ul {
 
 .section__title {
   color: #6a0aab;
+  font-size: 28px;
 }
 
 .section--theme-red .section__title {
@@ -198,7 +199,6 @@ ul {
 
 .feedback-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 440px);
   justify-content: center;
   gap: 16px;
 }
@@ -269,6 +269,9 @@ ul {
 }
 
 @media (min-width: 480px) {
+  .feedback-list {
+    grid-template-columns: repeat(auto-fit, 440px);
+  }
 }
 
 @media (min-width: 768px) {
