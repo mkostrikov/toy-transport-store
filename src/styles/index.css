@@ -142,8 +142,8 @@ ul {
 }
 
 .product__btn {
-  background-color: #fffa00;
-  color: #6a0aab;
+  background-color: #6a0aab;
+  color: #fffa00;
   font-weight: 700;
   padding: 12px 16px;
   border-radius: 8px;
@@ -213,8 +213,8 @@ ul {
   }
 
   .product__btn:hover {
-    background-color: #6a0aab;
-    color: #fffa00;
+    background-color: #fffa00;
+    color: #6a0aab;
   }
 }
 
