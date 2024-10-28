@@ -76,7 +76,21 @@ ul {
 }
 
 .nav-link {
+  position: relative;
+}
 
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  inline-size: 100%;
+  padding: 1px;
+  background: linear-gradient(#6a0aab, #6a0aab);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 0 100%;
+  transition: background-size 300ms;
 }
 
 .list {
@@ -86,7 +100,7 @@ ul {
 
 .product-list {
   display: grid;
-  grid-template-columns: minmax(0, 375px);
+  grid-template-columns: repeat(auto-fit, 285px);
   justify-content: center;
   gap: 16px;
 }
@@ -102,7 +116,6 @@ ul {
   padding: 24px;
   display: grid;
   grid-template-rows: auto minmax(0, 1fr) auto auto;
-  justify-items: center;
   gap: 24px;
 }
 
@@ -148,6 +161,8 @@ ul {
 
 .feedback-list {
   display: grid;
+  grid-template-columns: repeat(auto-fit, 440px);
+  justify-content: center;
   gap: 16px;
 }
 
@@ -192,6 +207,17 @@ ul {
   gap: 8px;
 }
 
+@media (hover: hover) {
+  .nav-link:hover:after {
+    background-size: 100% 100%;
+  }
+
+  .product__btn:hover {
+    background-color: #6a0aab;
+    color: #fffa00;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
@@ -202,13 +228,6 @@ ul {
 }
 
 @media (min-width: 480px) {
-  .product-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .feedback-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
 @media (min-width: 768px) {
@@ -232,14 +251,6 @@ ul {
   .section {
     gap: 40px;
   }
-
-  .product-list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .feedback-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
 @media (min-width: 1000px) {
@@ -262,14 +273,6 @@ ul {
 
   .section {
     gap: 48px;
-  }
-
-  .product-list {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .feedback-list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .nav-list {
@@ -301,13 +304,5 @@ ul {
 
   .section {
     gap: 48px;
-  }
-
-  .product-list {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
-
-  .feedback-list {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
