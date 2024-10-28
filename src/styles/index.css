@@ -1,0 +1,313 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+img {
+  max-inline-size: 100%;
+  vertical-align: bottom;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+a,
+a:active,
+a:visited {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/montserrat-v26-cyrillic_latin-regular.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/montserrat-v26-cyrillic_latin-700.woff2")
+    format("woff2");
+}
+
+.page {
+  font-family: "Montserrat", sans-serif;
+  max-inline-size: 1920px;
+  margin: 0 auto;
+  display: grid;
+  gap: 40px;
+}
+
+.main {
+  padding: 0 20px;
+  display: grid;
+  gap: 20px;
+}
+
+.header {
+  background-color: #fffa00;
+  color: #6a0aab;
+  padding: 48px 20px;
+  text-align: center;
+  display: grid;
+  gap: 24px;
+}
+
+.header__title {
+}
+
+.nav-list {
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+}
+
+.nav-link {
+
+}
+
+.list {
+  display: grid;
+  gap: 16px;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: minmax(0, 375px);
+  justify-content: center;
+  gap: 16px;
+}
+
+.product-list > li {
+  display: grid;
+}
+
+.product {
+  box-shadow: 16px 32px 56px 0 rgba(143, 174, 207, 0.25);
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto auto;
+  justify-items: center;
+  gap: 24px;
+}
+
+.product__img {
+}
+
+.product__img > img {
+  inline-size: 100%;
+  block-size: auto;
+}
+
+.product__title {
+  font-weight: 700;
+  font-size: 20px;
+  color: #6a0aab;
+  hyphens: auto;
+}
+
+.product__price {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000;
+}
+
+.product__btn {
+  background-color: #fffa00;
+  color: #6a0aab;
+  font-weight: 700;
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
+.section {
+  text-align: center;
+  display: grid;
+  gap: 24px;
+}
+
+.section__title {
+  color: #6a0aab;
+}
+
+.feedback-list {
+  display: grid;
+  gap: 16px;
+}
+
+.feedback-list > li {
+  display: grid;
+}
+
+.feedback {
+  box-shadow: 16px 32px 56px 0 rgba(143, 174, 207, 0.25);
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr);
+  gap: 24px;
+}
+
+.feedback__img {
+}
+
+.feedback__name {
+}
+
+.feedback__txt {
+  line-height: 1.5;
+}
+
+.footer {
+  background-color: #fffa00;
+  padding: 48px 20px;
+  display: grid;
+  gap: 24px;
+}
+
+.footer__title {
+  color: #6a0aab;
+}
+
+.footer__contacts {
+  color: #6a0aab;
+  display: grid;
+  gap: 8px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (min-width: 375px) {
+}
+
+@media (min-width: 480px) {
+  .product-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .feedback-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .page {
+    gap: 48px;
+  }
+
+  .header {
+    padding: 48px 32px;
+  }
+
+  .footer {
+    padding: 48px 32px;
+  }
+
+  .main {
+    padding: 0 32px;
+    gap: 48px;
+  }
+
+  .section {
+    gap: 40px;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .feedback-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1000px) {
+  .page {
+    gap: 56px;
+  }
+
+  .header {
+    padding: 48px 48px;
+  }
+
+  .footer {
+    padding: 48px 48px;
+  }
+
+  .main {
+    padding: 0 48px;
+    gap: 48px;
+  }
+
+  .section {
+    gap: 48px;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .feedback-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .nav-list {
+    grid-auto-flow: column;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1440px) {
+  .page {
+    gap: 56px;
+  }
+
+  .header {
+    padding: 48px 64px;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer {
+    padding: 48px 64px;
+  }
+
+  .main {
+    padding: 0 64px;
+    gap: 64px;
+  }
+
+  .section {
+    gap: 48px;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .feedback-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
