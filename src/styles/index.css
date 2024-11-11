@@ -217,12 +217,6 @@ ul {
   gap: 24px;
 }
 
-.feedback__img {
-}
-
-.feedback__name {
-}
-
 .feedback__txt {
   line-height: 1.5;
 }
@@ -244,7 +238,120 @@ ul {
   color: #fffa00;
 }
 
+.slider {
+  display: grid;
+}
+
+.slider__item {
+  display: none;
+}
+
+.slider__item.active {
+  display: grid;
+  align-items: center;
+  padding: 40px 80px;
+  block-size: 400px;
+  background-size: 400px;
+  background-repeat: repeat;
+}
+
+.slider__item-header {
+  border-radius: 16px;
+  padding: 20px;
+  display: grid;
+  gap: 32px;
+  align-content: center;
+  backdrop-filter: brightness(0.35);
+  color: #fff;
+}
+
+.slider__item-header > h3 {
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+.slider__item-header > p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.slider__item--cars {
+  background-color: red;
+  background-image: url("/src/assets/images/car-wallpaper.webp");
+}
+
+.slider__item--aircrafts {
+  background-color: orange;
+  background-image: url("/src/assets/images/plane-flying-airplane-vector.webp");
+}
+
+.slider__item--car-parts {
+  background-color: orange;
+  background-image: url("/src/assets/images/design-car-parts.webp");
+}
+
+.slider__item--boats {
+  background-color: orange;
+  background-image: url("/src/assets/images/sailboats.jpg");
+}
+
+.slider__item--firetrucks {
+  background-color: darkred;
+  background-image: url("/src/assets/images/fire-trucks.webp");
+}
+
+.slider__content {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.slider__controls {
+  grid-column: 1;
+  grid-row: 1;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slider__next-btn,
+.slider__prev-btn {
+  border-radius: 8px;
+  width: 50px;
+  height: 50px;
+  font-size: 34px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.slider__dots {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 16px;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.slider__dot {
+  width: 15px;
+  height: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider__dot.active {
+  background-color: #333;
+}
+
 @media (hover: hover) {
+  .slider__next-btn:hover,
+  .slider__prev-btn:hover {
+    opacity: 0.8;
+  }
+
   .nav-link:hover:after {
     background-size: 100% 100%;
   }
