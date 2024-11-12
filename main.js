@@ -19,7 +19,10 @@ function addDots() {
   }
 
   dots.forEach((dot, index) =>
-    dot.addEventListener("click", () => showSlide(index)),
+    dot.addEventListener("click", () => {
+      showSlide(index);
+      currentSlide = index;
+    }),
   );
 
   document.querySelector(".slider__dots").append(...dots);
